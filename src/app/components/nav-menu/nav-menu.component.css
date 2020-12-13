@@ -1,0 +1,15 @@
+button{
+    border:0;
+    background: #83276b;
+    color:rgba(255,255,255,0.5);
+    width:2cm;
+    height:2cm;
+    font-size:2em;
+    text-align: center;
+    border-bottom:1px solid #903d7a;
+    cursor:pointer;
+}
+button.active{
+    color:white;
+    background: #6f215b;
+}

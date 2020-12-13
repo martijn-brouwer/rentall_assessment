@@ -1,0 +1,132 @@
+<ng-container *ngIf="product">
+<div class='titlebar'>
+  {{product.productKey}} | {{product.description}}
+</div>
+<div class='productcontainer'>
+
+  <div class='productNav'>
+    <button [ngClass]="{active: productMenu==='DASHBOARD'}" (click)='switchTab("DASHBOARD")'>Dashboard</button>
+    <button [ngClass]="{active: productMenu==='COMPONENTS'}" (click)='switchTab("COMPONENTS")'>Components</button>
+    <button [ngClass]="{active: productMenu==='WAREHOUSE'}" (click)='switchTab("WAREHOUSE")'>Warehouse</button>
+    <button [ngClass]="{active: productMenu==='CONTRACTS'}" (click)='switchTab("CONTRACTS")'>Contracts</button>
+    <button [ngClass]="{active: productMenu==='PRODUCTSHEET'}" (click)='switchTab("PRODUCTSHEET")'>Product sheet</button>
+    <button [ngClass]="{active: productMenu==='DOCUMENTS'}" (click)='switchTab("DOCUMENTS")'>Documents</button>    
+  </div>
+
+  <div class='dashboard page' *ngIf="productMenu==='DASHBOARD'">
+    &gt; Details<br>
+    <hr>
+    <div class='details subpage'>
+
+      <label>Group</label><input [(ngModel)]="product.groupNumber"  type='number' [disabled]='!isAdmin'><button><i class="fas fa-shopping-cart"></i></button><br>
+      <label>AGP number</label><input [(ngModel)]="product.agpNumber"  type='number' [disabled]='!isAdmin'><button><i class="fas fa-barcode"></i></button><br>
+      <label>Length</label><input [(ngModel)]="product.length" type='number'><button><i class="fas fa-expand-alt"></i></button><br>
+      <label>Width</label><input [(ngModel)]="product.width"  type='number'><button><i class="fas fa-arrows-alt-h"></i></button><br>
+      <label>Height</label><input [(ngModel)]="product.height"  type='number'><button><i class="fas fa-arrows-alt-v"></i></button><br>
+      <label>Weight</label><input [(ngModel)]="product.weight"  type='number'><button><i class="fas fa-balance-scale"></i></button><br>
+      <label>Weight AWMS</label><input [(ngModel)]="product.weightAwms"  type='number'><button><i class="fas fa-balance-scale"></i></button><br>
+      <label>Header count</label>
+      <select>
+        <option *ngFor='let headCount of product.headerCount'> {{headCount.description}}</option>
+      </select><br>
+
+      <label>Label Row 1</label><input [(ngModel)]="product.labelRow1" maxlength="13"><button><i class="fas fa-barcode"></i></button><br>
+      <div class='validationMessage'>
+        <span *ngIf='!checkEAN13(product.labelRow1)'>Not a valid EAN13 barcode</span>
+      </div>
+      <label>Label Row 2</label><input [(ngModel)]="product.labelRow2" maxlength="13"><button><i class="fas fa-barcode"></i></button><br>
+      <div class='validationMessage'>
+        <span *ngIf='!checkEAN13(product.labelRow2)'>Not a valid EAN13 barcode</span>
+      </div>
+      <label>QR row 1</label><input [(ngModel)]="product.qrRow1"><button><i class="fas fa-qrcode"></i></button><br>
+      <label>QR row 2</label><input [(ngModel)]="product.qrRow2"><button><i class="fas fa-qrcode"></i></button><br>
+      <label>Print Label</label>
+      <select [disabled]='!isAdmin'>
+        <option *ngFor='let printType of product.printTypes'> {{printType.description}}</option>
+      </select><br>
+
+      <label>Change Product</label>
+      <select>
+        <option *ngFor='let changeType of product.changeTypes'> {{changeType.description}}</option>
+      </select>
+      <br>
+      <label>Phlippo</label>
+      <div class='toggleButton' [ngClass]="{disabled: !isAdmin}">
+        <i class="fas fa-toggle-on toggleSwitch" *ngIf='product.defaultPhlippo' (click)='togglePhlippo()'></i>
+        <i class="fas fa-toggle-off toggleSwitch" *ngIf='!product.defaultPhlippo'  (click)='togglePhlippo()'></i>
+      </div>
+    </div>
+    &gt; Service &amp; Inspections<br>
+    <hr>
+    <div class='details subpage'>
+      <label>Service group</label>
+      <select>
+        <option *ngFor='let group of product.serviceGroups'> {{group.description}}</option>
+      </select><br>
+      <label>NEN needed</label>
+      <i class="fas fa-toggle-on toggleSwitch" *ngIf='product.nen' (click)='toggleNen()'></i>
+      <i class="fas fa-toggle-off toggleSwitch" *ngIf='!product.nen' (click)='toggleNen()'></i>
+    </div>
+  </div>
+
+  <div class='components' *ngIf="productMenu==='COMPONENTS'">
+    <div class='comp block'>
+      <div class='title'>Components</div>
+      <div class='content'>
+        <table *ngIf="productComponents">
+          <tr>
+            <th>Key</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>SerialItem</th>
+          </tr>
+          <tr *ngFor='let component of productComponents.components'>
+            <td>{{component.productKey}}</td>
+            <td>{{component.description}}</td>
+            <td>{{component.quantity}}</td>
+            <td>{{component.serialitem}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class='aucxis block'>
+      <div class='title'>Auxcis settings</div>
+      <div class='content'>
+      <label>Tag Type</label>
+      <select [disabled]='!isAdmin'>
+        <option *ngFor='let tag of product.tagTypes'> {{tag.description}}</option>
+      </select><br>
+
+      <label>Rssi Level</label>
+      <select [disabled]='!isAdmin'>
+        <option *ngFor='let rssi of product.rssiLevels'> {{rssi.description}}</option>
+      </select><br>    
+     
+      <label>Load components</label>
+      <i class="fas fa-toggle-on toggleSwitch" *ngIf='product.loadComponents' (click)='toggleLoadComponents()'></i>
+      <i class="fas fa-toggle-off toggleSwitch" *ngIf='!product.loadComponents' (click)='toggleLoadComponents()'></i><br>
+      <label>Emballage</label>
+      <i class="fas fa-toggle-on toggleSwitch" *ngIf='product.emballage' (click)='toggleEmballage()'></i>
+      <i class="fas fa-toggle-off toggleSwitch" *ngIf='!product.emballage' (click)='toggleEmballage()'></i><br>
+      <label>Pallet</label>
+      <i class="fas fa-toggle-on toggleSwitch" *ngIf='product.pallet' (click)='togglePallet()'></i>
+      <i class="fas fa-toggle-off toggleSwitch" *ngIf='!product.pallet' (click)='togglePallet()'></i><br>
+      <label>Flightcase</label>
+      <i class="fas fa-toggle-on toggleSwitch" *ngIf='product.flightcase' (click)='toggleFlightcase()'></i>
+      <i class="fas fa-toggle-off toggleSwitch" *ngIf='!product.flightcase' (click)='toggleFlightcase()'></i><br>
+      <label>Product Changed</label>
+      <i class="fas fa-toggle-on toggleSwitch" *ngIf='product.productIdChanged' (click)='toggleProductChanged()'></i>
+      <i class="fas fa-toggle-off toggleSwitch" *ngIf='!product.productIdChanged' (click)='toggleProductChanged()'></i><br>
+    </div>
+  </div>
+</div>
+</div>
+</ng-container>
+
+<ng-container *ngIf="!product">
+  <div class='titlebar'>
+    Loading...
+  </div>
+</ng-container>
+

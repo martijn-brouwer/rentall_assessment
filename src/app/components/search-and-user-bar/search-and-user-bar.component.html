@@ -1,0 +1,8 @@
+<div class='searchbar'>
+    <div class='content'>
+        <i class="fas fa-bars"></i> 
+        <input placeholder="Search...">
+        <button *ngIf="!isAdmin" (click)='toggleUser()'>Log in as admin</button>
+        <button *ngIf="isAdmin" (click)='toggleUser()'>Log out</button>
+    </div>
+</div>

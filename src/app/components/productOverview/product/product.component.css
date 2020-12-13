@@ -1,0 +1,134 @@
+label {
+  width: 4cm;
+  display: inline-block;
+  text-align: right;
+  padding-right: 0.5cm;
+  margin-bottom: 0.2cm;
+}
+input {
+  padding: 0.3cm;
+  width: 5cm;
+  border-radius: 3px 0px 0px 3px;
+  border: 1px solid gray;
+  margin-bottom: 0.2cm;
+}
+select {
+  padding: 0.3cm;
+  width: 6.6cm;
+  border: 1px solid gray;
+  margin-bottom: 0.2cm;
+}
+.page button {
+  border: 1px solid gray;
+  padding: 0.3cm;
+  width: 1cm;
+  border-radius: 0px 3px 3px 0px;
+  margin-bottom: 0.2cm;
+  border-left: none;
+}
+.subpage {
+  column-count: 2;
+}
+.toggleSwitch {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.productNav button {
+  padding: 0.2cm;
+  border: none;
+  background: none;
+  margin-left: 0.2cm;
+  margin-top: 0.2cm;
+  color: gray;
+  cursor: pointer;
+}
+.productNav button.active {
+  border-radius: 5px 5px 0px 0px;
+  border-bottom: none;
+  color: black;
+}
+.productcontainer {
+  margin: 0.2cm;
+  margin-top: 0.4cm;
+}
+.page {
+  margin: 0.4cm;
+  padding: 0.4cm;
+}
+.components {
+  padding: 0.4cm;
+}
+
+.block .title {
+  padding: 0.3cm;
+}
+.block {
+  margin-bottom: 0.5cm;
+}
+
+.block .content {
+  padding: 0.5cm;
+}
+.validationMessage {
+  color: red;
+  padding-left: 4.6cm;
+  font-size: 0.8em;
+  margin-bottom: 0.2cm;
+}
+.toggleButton {
+  display: inline-block;
+}
+.toggleButton.disabled {
+  color: gray;
+}
+
+@media (prefers-color-scheme: light) {
+  .block table,
+  .block,
+  .page {
+    border: 1px solid #b0b0b0;
+  }
+  .block .title {
+    background: #fafcfc;
+    border-bottom: 1px solid #dae7e8;
+  }
+  .productcontainer, .productNav button.active {
+    background: white;
+    border: 1px solid #b0b0b0;
+  }
+  .productNav {
+    border-bottom: 1px solid #b0b0b0;
+    background: #fafcfc;
+  }
+  .page button {
+    background: white;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .block table,
+  .block {
+    border: 1px solid #4b4b4b;
+  }
+  .block .title,
+  .productNav {
+    background: #151717;
+    border-bottom: 1px solid #4b4b4b;
+  }
+  .page,
+  .productcontainer,
+  .productNav button.active {
+    border: 1px solid #4b4b4b;
+    color: #dddddd;
+  }
+  .page button,
+  .page select,
+  .page input,
+  .productcontainer,
+  .productNav button.active,
+  .block input,
+  .block select {
+    background: black;
+    color: #dddddd;
+  }
+}

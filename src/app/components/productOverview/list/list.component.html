@@ -1,0 +1,27 @@
+<div class='titlebar'>
+  Products
+</div>
+<div class='content'>
+<table *ngIf="productList">
+  <tr>
+    <th>Key</th>
+    <th>Description</th>
+    <th>Group</th>
+    <th>Stock</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr *ngFor="let product of productList">
+    <td>{{product.productKey}}</td>
+    <td>{{product.description}}</td>
+    <td><i>Not in json</i></td>
+    <td><i>Not in json</i></td>
+    <td>
+      <button (click)='goTo("/products/" + product.productKey)'><i class="fas fa-pen"></i></button>
+      <button><i class="fas fa-print"></i></button>
+    </td>
+  </tr>
+
+
+</table>
+</div>

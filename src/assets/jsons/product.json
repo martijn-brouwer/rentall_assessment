@@ -1,0 +1,251 @@
+{
+    "error": 0,
+    "GrowlMessage": "Product loaded",
+    "GrowlType": "success",
+    "ProductId": 39494,
+    "ProductKey": "LILE0155",
+    "Description": "SGM - Genio RGB, 40 dg, IP44  (XLR5) [6 Pieces]",
+    "GroupNumber": 1435,
+    "AgpNumber": 1435155,
+    "Length": ".0000",
+    "Width": ".0000",
+    "Height": ".0000",
+    "Weight": ".0000",
+    "WeightAwms": ".0000",
+    "HeaderVolumeWeightCalc": "",
+    "HeaderVolumeWeightUpdated": null,
+    "LabelRow1": "",
+    "LabelRow2": "",
+    "QrRow1": "",
+    "QrRow2": "",
+    "OV": 0,
+    "Emballage": 0,
+    "Pallet": 0,
+    "Flightcase": 0,
+    "PrintTypeId": null,
+    "ServiceGroupId": 1,
+    "NEN": 0,
+    "TUV": 0,
+    "TUVGroupId": null,
+    "PropertieGroupId": 1,
+    "changeSG": 1,
+    "setInspections": 1,
+    "addProperties": 1,
+    "delProperties": 1,
+    "editQR": 1,
+    "changePG": 1,
+    "SetProperties": 1,
+    "changePL": 1,
+    "LoadComponents": 1,
+    "editAgpNumber": 1,
+    "changeChangeType": 1,
+    "ProductChangeTypeId": 1,
+    "changeTagType": 1,
+    "ProductTagTypeId": 1,
+    "changeProductIdChanged": 1,
+    "ProductIdChanged": 0,
+    "SeeProductIdChanged": 1,
+    "ChangeProductId": 1,
+    "LevelId": 1,
+    "changeLevelId": 1,
+    "Image": "img\/nopics.png",
+    "DefaultPhlippo": 0,
+    "MainItem": "V",
+    "printTypes": [
+        {
+            "id": 9,
+            "description": "Bulk Barcode normal"
+        },
+        {
+            "id": 10,
+            "description": "Bulk Barcode small"
+        },
+        {
+            "id": 7,
+            "description": "Bulk QR normal"
+        },
+        {
+            "id": 8,
+            "description": "Bulk QR small"
+        },
+        {
+            "id": 3,
+            "description": "Serial Barcode normal"
+        },
+        {
+            "id": 6,
+            "description": "Serial Barcode small"
+        },
+        {
+            "id": 1,
+            "description": "Serial QR normal"
+        },
+        {
+            "id": 2,
+            "description": "Serial QR small"
+        }
+    ],
+    "changeTypes": [
+        {
+            "id": 4,
+            "description": "Multiple headers    "
+        },
+        {
+            "id": 1,
+            "description": "No change needed    "
+        },
+        {
+            "id": 3,
+            "description": "One new set header  "
+        },
+        {
+            "id": 2,
+            "description": "Only components     "
+        }
+    ],
+    "tagTypes": {
+        "1": {
+            "id": 7,
+            "description": "Alien-G"
+        },
+        "2": {
+            "id": 2,
+            "description": "EXO 600"
+        },
+        "3": {
+            "id": 3,
+            "description": "EXO 750"
+        },
+        "4": {
+            "id": 4,
+            "description": "EXO 800"
+        },
+        "5": {
+            "id": 5,
+            "description": "EXO 800P"
+        },
+        "6": {
+            "id": 8,
+            "description": "EXO 800P black"
+        },
+        "7": {
+            "id": 6,
+            "description": "Ironsode Slim"
+        },
+        "8": {
+            "id": 1,
+            "description": "No tag"
+        },
+        "9": {
+            "id": 9,
+            "description": "Tag needed"
+        }
+    },
+    "serviceGroups": {
+        "1": {
+            "id": 1,
+            "description": "General"
+        },
+        "2": {
+            "id": 6,
+            "description": "Hoist"
+        },
+        "3": {
+            "id": 2,
+            "description": "Lighting"
+        },
+        "4": {
+            "id": 9,
+            "description": "Smoke"
+        },
+        "5": {
+            "id": 3,
+            "description": "Sound"
+        },
+        "6": {
+            "id": 5,
+            "description": "Trussing"
+        },
+        "7": {
+            "id": 4,
+            "description": "Video"
+        }
+    },
+    "TUVGroups": {
+        "1": {
+            "id": 1,
+            "description": "Chain Master"
+        },
+        "2": {
+            "id": 2,
+            "description": "CM loadstar"
+        }
+    },
+    "PropertyGroups": {
+        "1": {
+            "id": 6,
+            "description": "Fiber cables"
+        },
+        "2": {
+            "id": 1,
+            "description": "General"
+        },
+        "3": {
+            "id": 2,
+            "description": "Movingheads"
+        },
+        "4": {
+            "id": 4,
+            "description": "Projectors"
+        },
+        "5": {
+            "id": 3,
+            "description": "Sounddesks"
+        },
+        "6": {
+            "id": 5,
+            "description": "Video"
+        }
+    },
+    "properties": {
+        "1": {
+            "error": 1
+        }
+    },
+    "RssiLevel": {
+        "1": {
+            "id": 1,
+            "description": "-60db (Default)"
+        },
+        "2": {
+            "id": 2,
+            "description": "-59db"
+        },
+        "3": {
+            "id": 3,
+            "description": "-58db"
+        },
+        "4": {
+            "id": 4,
+            "description": "-55db"
+        },
+        "5": {
+            "id": 5,
+            "description": "-48db"
+        }
+    },
+    "headerCount": {
+        "1": {
+            "id": "",
+            "description": "Count header and components"
+        },
+        "2": {
+            "id": "H",
+            "description": "Count header only"
+        },
+        "3": {
+            "id": "C",
+            "description": "Count components only"
+        }
+    }
+}

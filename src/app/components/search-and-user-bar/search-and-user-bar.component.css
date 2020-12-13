@@ -1,0 +1,27 @@
+.searchbar {
+  width: 100%;
+}
+input {
+  margin-left: 1cm;
+  border: none;
+  width: 10cm;
+  background: transparent;
+}
+.content {
+  padding: 0.3cm;
+}
+button {
+  float: right;
+  padding: 0.1cm;
+}
+@media (prefers-color-scheme: dark) {
+  input {
+    background: transparent;
+    color: white;
+  }
+  button {
+    color: white;
+    background: black;
+    border: 1px solid #4b4b4b;
+  }
+}

@@ -1,0 +1,16 @@
+.mainmenu {
+  background: #83276b;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width:2cm;
+}
+.maincontent{
+    margin-left:2cm;
+    position: relative;
+
+}
+.routeroutlet{
+    margin:0.5cm;
+
+}

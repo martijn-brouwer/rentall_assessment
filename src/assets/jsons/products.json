@@ -1,0 +1,118 @@
+{
+    "content": [
+        {
+            "productId": 39437,
+            "productKey": "LOFC0932",
+            "agpNumber": 6415932,
+            "description": "Flightcase + lids F/R, 19\" 3HE for PSU 60x55x19.5cm [Purple]",
+            "ov": false,
+            "emballage": false,
+            "deleted": 0,
+            "pallet": false,
+            "flightcase": true,
+            "minimumPeakRssi": -60.0,
+            "productComponents": null
+        },
+        {
+            "productId": 39438,
+            "productKey": "FEPR0382",
+            "agpNumber": 1710382,
+            "description": "Nokia - Power rail system bracket White",
+            "ov": false,
+            "emballage": false,
+            "deleted": 0,
+            "pallet": false,
+            "flightcase": false,
+            "minimumPeakRssi": -60.0,
+            "productComponents": null
+        },
+        {
+            "productId": 39439,
+            "productKey": "FEPR0384",
+            "agpNumber": 1710384,
+            "description": "Rent-All - System bracket Keper",
+            "ov": false,
+            "emballage": false,
+            "deleted": 0,
+            "pallet": false,
+            "flightcase": false,
+            "minimumPeakRssi": -60.0,
+            "productComponents": null
+        },
+        {
+            "productId": 39494,
+            "productKey": "LILE0155",
+            "agpNumber": 1435155,
+            "description": "SGM - Genio RGB, 40 dg, IP44  (XLR5) [6 Pieces]",
+            "ov": false,
+            "emballage": false,
+            "deleted": 0,
+            "pallet": false,
+            "flightcase": false,
+            "minimumPeakRssi": -60.0,
+            "productComponents": [
+                {
+                    "productComponentsId": 89714,
+                    "agpNumber": 1435155,
+                    "componentAgpNumber": 1435153,
+                    "quantity": 6,
+                    "sort": 1,
+                    "ondemand": false,
+                    "deleted": 0,
+                    "auxcisStatus": false,
+                    "productSet": false,
+                    "priority": true
+                },
+                {
+                    "productComponentsId": 89712,
+                    "agpNumber": 1435155,
+                    "componentAgpNumber": 2620160,
+                    "quantity": 6,
+                    "sort": 2,
+                    "ondemand": false,
+                    "deleted": 0,
+                    "auxcisStatus": false,
+                    "productSet": false,
+                    "priority": false
+                },
+                {
+                    "productComponentsId": 89713,
+                    "agpNumber": 1435155,
+                    "componentAgpNumber": 2620165,
+                    "quantity": 6,
+                    "sort": 3,
+                    "ondemand": false,
+                    "deleted": 0,
+                    "auxcisStatus": false,
+                    "productSet": false,
+                    "priority": false
+                }
+            ]
+        }
+    ],
+    "pageable": {
+        "sort": {
+            "sorted": false,
+            "unsorted": true,
+            "empty": true
+        },
+        "offset": 1000,
+        "pageSize": 4,
+        "pageNumber": 10,
+        "unpaged": false,
+        "paged": true
+    },
+    "totalElements": 1617,
+    "last": false,
+    "totalPages": 405,
+    "size": 4,
+    "number": 10,
+    "sort": {
+        "sorted": false,
+        "unsorted": true,
+        "empty": true
+    },
+    "numberOfElements": 4,
+    "first": false,
+    "empty": false
+}

@@ -1,1 +1,121 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+html,
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.mainmenu {
+  color: white;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  padding-top: 0.2cm;
+  padding-bottom: 0.2cm;
+  padding-left: 0.2cm;
+  text-align: left;
+}
+
+hr {
+  border: 0;
+  display: block;
+  height: 1px;
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: black;
+    background: #eaedf1;
+  }
+
+  .routeroutlet {
+    background: #ffffff;
+    border: 1px solid #b0b0b0;
+  }
+  .breadcrumbs {
+    background: #ffffff;
+    border-bottom: 1px solid #dae7e8;
+    font-size: 0.8em;
+  }
+  .searchbar {
+    background: #fafcfc;
+    border-bottom: 1px solid #b0b0b0;
+  }
+  .titlebar {
+    background: #fafcfc;
+    border-bottom: 1px solid #dae7e8;
+    padding: 0.3cm;
+  }
+  hr {
+    border-top: 1px solid #b0b0b0;
+  }
+  table button {
+    background: #f0f4f5;
+    border: 1px solid #e5edee;
+  }
+  table th {
+    border-bottom: 1px solid #aeaeae;
+  }
+  table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    color: white;
+    background: #070707;
+  }
+
+  .routeroutlet {
+    background: #000000;
+    border: 1px solid #4b4b4b;
+  }
+  .breadcrumbs {
+    background: #000000;
+    border-bottom: 1px solid #191b1b;
+    font-size: 0.8em;
+  }
+  .searchbar {
+    background: #191b1b;
+    border-bottom: 1px solid #4b4b4b;
+  }
+  .titlebar {
+    background: #191b1b;
+    border-bottom: 1px solid #4b4b4b;
+    padding: 0.3cm;
+  }
+  hr {
+    border-top: 1px solid #4b4b4b;
+  }
+  table button {
+    background:transparent;
+    border: 1px solid #161717;
+    color: white;
+  }
+  table th {
+    border-bottom: 1px solid #4b4b4b;
+  }
+  table tr:nth-child(even) {
+    background-color: #151616;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
