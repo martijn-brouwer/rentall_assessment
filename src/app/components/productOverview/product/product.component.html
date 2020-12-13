@@ -18,8 +18,8 @@
     <hr>
     <div class='details subpage'>
 
-      <label>Group</label><input [(ngModel)]="product.groupNumber"  type='number' [disabled]='!isAdmin'><button><i class="fas fa-shopping-cart"></i></button><br>
-      <label>AGP number</label><input [(ngModel)]="product.agpNumber"  type='number' [disabled]='!isAdmin'><button><i class="fas fa-barcode"></i></button><br>
+      <label>Group</label><input [(ngModel)]="product.groupNumber"  type='number' [disabled]='!isAdmin' [ngClass]="{disabled: !isAdmin}"><button><i class="fas fa-shopping-cart"></i></button><br>
+      <label>AGP number</label><input [(ngModel)]="product.agpNumber"  type='number' [disabled]='!isAdmin' [ngClass]="{disabled: !isAdmin}"><button><i class="fas fa-barcode"></i></button><br>
       <label>Length</label><input [(ngModel)]="product.length" type='number'><button><i class="fas fa-expand-alt"></i></button><br>
       <label>Width</label><input [(ngModel)]="product.width"  type='number'><button><i class="fas fa-arrows-alt-h"></i></button><br>
       <label>Height</label><input [(ngModel)]="product.height"  type='number'><button><i class="fas fa-arrows-alt-v"></i></button><br>
@@ -41,7 +41,7 @@
       <label>QR row 1</label><input [(ngModel)]="product.qrRow1"><button><i class="fas fa-qrcode"></i></button><br>
       <label>QR row 2</label><input [(ngModel)]="product.qrRow2"><button><i class="fas fa-qrcode"></i></button><br>
       <label>Print Label</label>
-      <select [disabled]='!isAdmin'>
+      <select [disabled]='!isAdmin' [ngClass]="{disabled: !isAdmin}">
         <option *ngFor='let printType of product.printTypes'> {{printType.description}}</option>
       </select><br>
 
@@ -94,12 +94,12 @@
       <div class='title'>Auxcis settings</div>
       <div class='content'>
       <label>Tag Type</label>
-      <select [disabled]='!isAdmin'>
+      <select [disabled]='!isAdmin' [ngClass]="{disabled: !isAdmin}">
         <option *ngFor='let tag of product.tagTypes'> {{tag.description}}</option>
       </select><br>
 
       <label>Rssi Level</label>
-      <select [disabled]='!isAdmin'>
+      <select [disabled]='!isAdmin' [ngClass]="{disabled: !isAdmin}">
         <option *ngFor='let rssi of product.rssiLevels'> {{rssi.description}}</option>
       </select><br>    
      

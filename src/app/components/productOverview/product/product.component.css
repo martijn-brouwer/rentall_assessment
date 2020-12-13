@@ -131,4 +131,8 @@ select {
     background: black;
     color: #dddddd;
   }
+  .subpage input.disabled, .subpage select.disabled, .block input.disabled, .block select.disabled{
+    background:#333333;
+    color:#999999;
+  }
 }
