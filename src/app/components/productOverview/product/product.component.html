@@ -20,10 +20,10 @@
 
       <label>Group</label><input [(ngModel)]="product.groupNumber"  type='number' [disabled]='!isAdmin' [ngClass]="{disabled: !isAdmin}"><button><i class="fas fa-shopping-cart"></i></button><br>
       <label>AGP number</label><input [(ngModel)]="product.agpNumber"  type='number' [disabled]='!isAdmin' [ngClass]="{disabled: !isAdmin}"><button><i class="fas fa-barcode"></i></button><br>
-      <label>Length</label><input [(ngModel)]="product.length" type='number'><button><i class="fas fa-expand-alt"></i></button><br>
-      <label>Width</label><input [(ngModel)]="product.width"  type='number'><button><i class="fas fa-arrows-alt-h"></i></button><br>
-      <label>Height</label><input [(ngModel)]="product.height"  type='number'><button><i class="fas fa-arrows-alt-v"></i></button><br>
-      <label>Weight</label><input [(ngModel)]="product.weight"  type='number'><button><i class="fas fa-balance-scale"></i></button><br>
+      <label>Length</label><input [(ngModel)]="product.length" type='number' required><button><i class="fas fa-expand-alt"></i></button><br>
+      <label>Width</label><input [(ngModel)]="product.width"  type='number'  required><button><i class="fas fa-arrows-alt-h"></i></button><br>
+      <label>Height</label><input [(ngModel)]="product.height"  type='number' required><button><i class="fas fa-arrows-alt-v"></i></button><br>
+      <label>Weight</label><input [(ngModel)]="product.weight"  type='number' required><button><i class="fas fa-balance-scale"></i></button><br>
       <label>Weight AWMS</label><input [(ngModel)]="product.weightAwms"  type='number'><button><i class="fas fa-balance-scale"></i></button><br>
       <label>Header count</label>
       <select>
