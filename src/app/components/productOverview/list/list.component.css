@@ -1,4 +1,24 @@
 .content {
   padding: 0.5cm;
 }
+label {
+  width: 2cm;
+  display:inline-block;
+}
+input{
+  margin-right:1cm;
+  margin-bottom:0.5cm;
+  padding:0.2cm;
+}
+span{
+  font-size:0.7em;
+  font-style: italic;
+}
 
+@media (prefers-color-scheme: dark) {
+  input{
+    background:black;
+    border:1px solid #4b4b4b;
+    color:#bbbbbb;
+  }
+}
